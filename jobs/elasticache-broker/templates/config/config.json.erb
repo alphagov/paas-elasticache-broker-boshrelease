@@ -9,5 +9,6 @@
   "catalog": <%= JSON.dump(p('elasticache-broker.catalog')) %>,
   "plan_configs": <%= JSON.dump(p('elasticache-broker.plan_configs')) %>,
   "log_level": "<%= p('elasticache-broker.log_level') %>",
-  "kms_key_id": "<%= p('elasticache-broker.kms_key_id') %>"
+  "kms_key_id": "<%= p('elasticache-broker.kms_key_id') %>",
+  "secrets_manager_path": "<%= p('elasticache-broker.secrets_manager_path') %>"
 }
