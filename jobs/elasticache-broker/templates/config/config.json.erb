@@ -8,5 +8,6 @@
   "vpc_security_group_ids": <%= JSON.dump(p('elasticache-broker.vpc_security_group_ids')) %>,
   "catalog": <%= JSON.dump(p('elasticache-broker.catalog')) %>,
   "plan_configs": <%= JSON.dump(p('elasticache-broker.plan_configs')) %>,
-  "log_level": "<%= p('elasticache-broker.log_level') %>"
+  "log_level": "<%= p('elasticache-broker.log_level') %>",
+  "kms_key_id": "<%= p('elasticache-broker.kms_key_id') %>"
 }

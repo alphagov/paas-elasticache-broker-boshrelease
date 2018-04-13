@@ -35,3 +35,6 @@ properties:
   elasticache-broker.log_level:
     description: "Logging level, valid values are: DEBUG, INFO, ERROR, FATAL"
     default: INFO
+  elasticache-broker.kms_key_id:
+    description: "The KMS key used to encrypt/decrypt Redis cluster auth tokens for AWS Secrets Manager"
+    default: alias/elasticache-broker
