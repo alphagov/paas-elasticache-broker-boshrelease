@@ -20,8 +20,6 @@ properties:
     default: "elasticache-broker"
   elasticache-broker.broker_password:
     description: "The password for basic auth between the Cloud Controller and the broker"
-  elasticache-broker.auth_token_seed:
-    description: "The common seed for generating authentication tokens for the ElastiCache clusters"
   elasticache-broker.cache_subnet_group_name:
     description: "The ElastiCache Subnet Group name where the ElastiCache clusters will be created"
   elasticache-broker.vpc_security_group_ids:
