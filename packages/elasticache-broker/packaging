@@ -5,12 +5,17 @@ set -u # report the usage of uninitialized variables
 export GOROOT=$(readlink -nf /var/vcap/packages/golang)
 export PATH=${GOROOT}/bin:${PATH}
 
+# Set Go cache
+export GOCACHE=/tmp/gocache/paas-elasticache-broker
+mkdir -p $GOCACHE
+
 # Build ElastiCache Service Broker package
 echo "Building ElastiCache Service Broker..."
 PACKAGE_NAME=github.com/alphagov/paas-elasticache-broker
 mkdir -p ${BOSH_INSTALL_TARGET}/src/${PACKAGE_NAME}
 cp -a ${BOSH_COMPILE_TARGET}/${PACKAGE_NAME}/* ${BOSH_INSTALL_TARGET}/src/${PACKAGE_NAME}
 export GOPATH=${BOSH_INSTALL_TARGET}
+cd ${BOSH_INSTALL_TARGET}/src/${PACKAGE_NAME}
 go install ${PACKAGE_NAME}
 mv ${GOPATH}/bin/paas-elasticache-broker ${GOPATH}/bin/elasticache-broker
 
