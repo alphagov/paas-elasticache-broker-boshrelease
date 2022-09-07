@@ -1,4 +1,4 @@
 [submodule "src/github.com/alphagov/paas-elasticache-broker"]
 	path = src/github.com/alphagov/paas-elasticache-broker
 	url = https://github.com/alphagov/paas-elasticache-broker
-        branch = usr-specd-maintenance-window
+	branch = usr-specd-maintenance-window
