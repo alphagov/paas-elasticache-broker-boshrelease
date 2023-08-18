@@ -1,13 +1,7 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
-# Set Golang dependency
-export GOROOT=$(readlink -nf /var/vcap/packages/golang)
-export PATH=${GOROOT}/bin:${PATH}
-
-# Set Go cache
-export GOCACHE=/tmp/gocache/paas-elasticache-broker
-mkdir -p $GOCACHE
+source /var/vcap/packages/golang-1.20-linux/bosh/compile.env
 
 # Build ElastiCache Service Broker package
 echo "Building ElastiCache Service Broker..."
