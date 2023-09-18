@@ -25,7 +25,7 @@ _testmain.go
 
 credentials.yml
 config/dev.yml
-# config/private.yml
+config/private.yml
 releases/*.tgz
 dev_releases
 blobs
