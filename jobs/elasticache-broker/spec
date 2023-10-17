@@ -39,3 +39,20 @@ properties:
   elasticache-broker.secrets_manager_path:
     description: "The path prefix used in AWS Secrets Manager to store Redis auth tokens. Trailing / characters are automatically removed"
     default: elasticache-broker
+  elasticache-broker.host:
+    description: "Broker Listen hostname or IP"
+    example: "0.0.0.0"
+  elasticache-broker.tls:
+    description: "Certificate and private key for TLS listener"
+    example: |
+      certificate: |
+        -----BEGIN CERTIFICATE-----
+        ...
+        -----END CERTIFICATE-----
+        -----BEGIN CERTIFICATE-----
+        ...
+        -----END CERTIFICATE-----
+      private_key: |
+        -----BEGIN EXAMPLE RSA PRIVATE KEY-----
+        ...
+        -----END EXAMPLE RSA PRIVATE KEY-----
