@@ -1,5 +1,14 @@
 {
   "broker_name": "<%= p('elasticache-broker.broker_name') %>",
+<% if_p('elasticache-broker.host') do |host| -%>
+  "host": "<%= host %>",
+<% end -%>
+<% if_p('elasticache-broker.tls') do |tls| -%>
+  "tls": {
+    "certificate": "<%= tls.fetch("certificate").gsub(/\n/, '\\n') %>",
+    "private_key": "<%= tls.fetch("private_key").gsub(/\n/, '\\n') %>"
+  },
+<% end -%>
   "username": "<%= p('elasticache-broker.broker_username') %>",
   "password": "<%= p('elasticache-broker.broker_password') %>",
   "region": "<%= p('elasticache-broker.region') %>",
