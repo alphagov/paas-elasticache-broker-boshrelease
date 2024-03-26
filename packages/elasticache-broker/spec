@@ -1,7 +1,7 @@
 ---
 name: elasticache-broker
 dependencies:
-  - golang-1.20-linux
+  - golang-1.21-linux
 
 files:
   - github.com/alphagov/paas-elasticache-broker/**/*
